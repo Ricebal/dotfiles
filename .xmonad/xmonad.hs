@@ -14,8 +14,10 @@ import Graphics.X11.ExtraTypes.XF86
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
+import XMonad.Layout.ToggleLayouts
 
 
 import qualified XMonad.StackSet as W
@@ -153,7 +155,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_w     ), spawn "firefox")
 
     -- Start thunar
-    , ((modm              , xK_e     ), spawn "alacritty -e ranger")
+    , ((modm              , xK_e     ), spawn (myTerminal ++ " -e ranger"))
 
     -- Start discord
     , ((modm              , xK_d     ), spawn "discord")
@@ -210,7 +212,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = tiled ||| Mirror tiled ||| noBorders Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = smartSpacingWithEdge 5 $ Tall nmaster delta ratio
@@ -242,8 +244,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
 myManageHook = composeAll
     [ className =? "mpv"        --> doFloat
     , className =? "Gimp"           --> doFloat
-    , className =? "ffxiv_dx11.exe" --> doFullFloat
-    , isFullscreen                  --> doFullFloat
+    -- , className =? "ffxiv_dx11.exe" --> doFullFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -256,7 +257,7 @@ myManageHook = composeAll
 -- return (All True) if the default handler is to be run afterwards. To
 -- combine event hooks use mappend or mconcat from Data.Monoid.
 --
-myEventHook = fullscreenEventHook
+myEventHook = ewmhDesktopsEventHook
 
 ------------------------------------------------------------------------
 -- Status bars and logging
@@ -320,7 +321,7 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = smartBorders (myLayout),
+        layoutHook         = myLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
