@@ -90,6 +90,6 @@ Config {
         , Run Kbd            [ ("us(dvorak)" , "<fc=#e3b397>DV</fc>")
                              , ("us"         , "<fc=#e3b397>US</fc>")
                              ]
-        , Run Com             "/bin/sh" ["-c" ,"~/.config/xmobar/spotify.sh"] "music" 1000
+        , Run Com             "/bin/sh" ["-c" ,"~/.config/xmobar/spotify.sh"] "music" 50
         ]
    }
