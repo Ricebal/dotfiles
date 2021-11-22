@@ -2,6 +2,7 @@ Config {
 
    -- appearance
      font =         "xft:AvantGarde-Book:size=10:bold:antialias=true"
+   , textOffset = 13
    , bgColor =      "#1c1b19"
    , fgColor =      "#fce8c3"
    , position =     Top
