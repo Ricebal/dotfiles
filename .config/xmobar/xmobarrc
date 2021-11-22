@@ -2,17 +2,19 @@ Config {
 
    -- appearance
      font =         "xft:AvantGarde-Book:size=10:bold:antialias=true"
-   , bgColor =      "#1c1b19"
-   , fgColor =      "#fce8c3"
-   , position =     Top
-   -- , alpha =        255
---    , border =       BottomB
+   , textOffset =   13
+   , bgColor =      "#000000"
+   , fgColor =      "#ffb6c1"
+   , position =     Static { xpos=1925, ypos=5, width=1910, height=18 }
+   -- , position =     TopW C 99
+   , alpha =        200
+   -- , border =       TopBM
    , borderColor =  "#646464"
 
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "   %StdinReader% <fc=#0aaeb3>♥</fc> %multicpu% <fc=#0aaeb3>♥</fc> %coretemp% <fc=#0aaeb3>♥</fc> %memory% <fc=#0aaeb3>♥</fc> %dynnetwork% }{ %music% <fc=#0aaeb3>♥</fc> %EHLE% <fc=#0aaeb3>♥</fc> %date%   "
+   , template = "   %StdinReader% <fc=#b6e6ff>♥</fc> %multicpu% <fc=#b6e6ff>♥</fc> %coretemp% <fc=#b6e6ff>♥</fc> %memory% <fc=#b6e6ff>♥</fc> %dynnetwork% }{ %music% <fc=#b6e6ff>♥</fc> %EHLE% <fc=#b6e6ff>♥</fc> %date%   "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start

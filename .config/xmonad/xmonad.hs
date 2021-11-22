@@ -63,8 +63,8 @@ myWorkspaces    = ["term","www","disc","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#19374b"
-myFocusedBorderColor = "#ebb39c"
+myNormalBorderColor  = "#ffb6c1"
+myFocusedBorderColor = "#7cfc00"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -215,7 +215,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Mirror tiled ||| noBorders Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = spacingWithEdge 5 $ Tall nmaster delta ratio
+     tiled   = spacingWithEdge 3 $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -284,8 +284,8 @@ myBar = "xmobar"
 
 -- Custom PP, configure it as you like. It determines what is being written to the bar.
 -- myPP = xmobarPP { ppCurrent = xmobarColor "#87fdc1" "" . wrap ">" "<" }
-myPP = def { ppCurrent = xmobarColor "#0aaeb3" "" . wrap ">" "<"
-           , ppTitle = xmobarColor "white" "" . shorten 30
+myPP = def { ppCurrent = xmobarColor "#b6ffd0" "" . wrap ">" "<"
+           , ppTitle = xmobarColor "#b6ffd0" "" . shorten 30
            , ppVisible = wrap "[" "]"
            , ppUrgent  = xmobarColor "red" "yellow"
            }
