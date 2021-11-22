@@ -245,6 +245,7 @@ myManageHook = composeAll
     [ className =? "mpv"        --> doFloat
     , className =? "Gimp"           --> doFloat
     -- , className =? "ffxiv_dx11.exe" --> doFullFloat
+    , resource =? "Hellpoint.x86_64" --> doFullFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
