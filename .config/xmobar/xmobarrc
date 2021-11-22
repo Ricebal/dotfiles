@@ -5,8 +5,8 @@ Config {
    , textOffset = 13
    , bgColor =      "#1c1b19"
    , fgColor =      "#fce8c3"
-   , position =     Top
-   -- , alpha =        255
+   , position =     Static { xpos=1925, ypos=5, width=1910, height=18 }
+   , alpha =        200
 --    , border =       BottomB
    , borderColor =  "#646464"
 
