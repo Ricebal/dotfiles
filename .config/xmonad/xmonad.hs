@@ -82,7 +82,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_v     ), spawn "pavucontrol")
     
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run")
+    , ((modm,               xK_p     ), spawn "exe='dmenu_path | dmenu' && exec $exe")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -215,7 +215,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = tiled ||| Mirror tiled ||| noBorders Full
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = spacingWithEdge 3 $ Tall nmaster delta ratio
+     tiled   = spacingRaw False (Border 3 3 3 3) True (Border 3 3 3 3) True $ Tall nmaster delta ratio
 
      -- The default number of windows in the master pane
      nmaster = 1
