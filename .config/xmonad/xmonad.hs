@@ -82,7 +82,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_v     ), spawn "pavucontrol")
     
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "exe='dmenu_path | dmenu' && exec $exe")
+    , ((modm,               xK_p     ), spawn "exe=`dmenu_path | dmenu -w 0xe00001 -fn 'AvantGarde-Book:bold:antialias=true:pixelsize=18' -p 'Run: ' -nb '#000000' -nf '#ffb6c1' -sb '#ffb6c1' -sf '#b6ffd0'` && exec $exe")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
