@@ -33,7 +33,7 @@ myTerminal      = "alacritty"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
-myFocusFollowsMouse = True
+myFocusFollowsMouse = False
 
 -- Whether clicking on a window to focus also passes the click to the window
 myClickJustFocuses :: Bool
@@ -81,9 +81,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Start volume control
     , ((modm              , xK_v     ), spawn "pavucontrol")
     
-    -- launch dmenu
-    , ((modm,               xK_p     ), spawn "exe=`dmenu_path | dmenu -w 0xe00001 -fn 'AvantGarde-Book:bold:antialias=true:pixelsize=18' -p 'Run: ' -nb '#000000' -nf '#ffb6c1' -sb '#ffb6c1' -sf '#b6ffd0'` && exec $exe")
-    , ((modm .|. shiftMask, xK_p     ), spawn "exe=`dmenu_path | passmenu -w 0xe00001 -fn 'AvantGarde-Book:bold:antialias=true:pixelsize=18' -p 'PW-Store: ' -nb '#000000' -nf '#ffb6c1' -sb '#ffb6c1' -sf '#b6ffd0'` && exec $exe")
+    -- launch rofi
+    , ((modm,               xK_p     ), spawn "rofi -show run")
+    , ((modm .|. shiftMask, xK_p     ), spawn "rofi-pass")
+    , ((modm              , xK_i     ), spawn "rofi -show emoji")
     -- launch gmrun
     --, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
@@ -284,9 +285,9 @@ myBar = "xmobar"
 
 -- Custom PP, configure it as you like. It determines what is being written to the bar.
 -- myPP = xmobarPP { ppCurrent = xmobarColor "#87fdc1" "" . wrap ">" "<" }
-myPP = def { ppCurrent = xmobarColor "#b6ffd0" "" . wrap ">" "<"
+myPP = def { ppCurrent = xmobarColor "#b6ffd0" "" . wrap "<fn=1>\xfb0c</fn> " "<fn=1></fn>"
            , ppTitle = xmobarColor "#b6ffd0" "" . shorten 30
-           , ppVisible = wrap "[" "]"
+           , ppVisible = xmobarColor "#b6ffd0" "" . wrap "" ""
            , ppUrgent  = xmobarColor "red" "yellow"
            }
 

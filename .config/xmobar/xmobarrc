@@ -1,13 +1,15 @@
 Config { 
 
    -- appearance
-     font =         "xft:AvantGarde-Book:size=10:bold:antialias=true"
-   , textOffset =   13
+     font =         "xft:AvantGarde-Book:size=11:bold:antialias=true"
+   , additionalFonts = ["xft:Mononoki Nerd Font:pixelsize=11:antialias=true:hinting=true"
+                        ,"xft:FontAwessome:pixelsize=13"]
+   , textOffset =   15
    , bgColor =      "#000000"
    , fgColor =      "#ffb6c1"
-   , position =     Static { xpos=1925, ypos=5, width=1910, height=18 }
+   , position =     Static { xpos=1920, ypos=0, width=1920, height=20 }
    -- , position =     TopW C 99
-   , alpha =        200
+   , alpha =        255
    -- , border =       TopBM
    , borderColor =  "#646464"
 
@@ -66,7 +68,7 @@ Config {
                              ] 10
 
         -- cpu core temperature monitor
-        , Run CoreTemp       [ "--template" , "Temp: <core0>°C|<core1>°C"
+        , Run CoreTemp       [ "--template" , "Temp: <core0><fn=1>\xfa03</fn>|<core1>°C"
                              , "--Low"      , "70"        -- units: °C
                              , "--High"     , "80"        -- units: °C
                              , "--low"      , "#519f50"
