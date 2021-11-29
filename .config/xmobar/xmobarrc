@@ -5,8 +5,8 @@ Config {
    , additionalFonts = ["xft:Mononoki Nerd Font:pixelsize=11:antialias=true:hinting=true"
                         ,"xft:FontAwessome:pixelsize=13"]
    , textOffset =   15
-   , bgColor =      "#0d0306"
-   , fgColor =      "#9bdee0"
+   , bgColor =      "#100d12"
+   , fgColor =      "#e0cecd"
    , position =     Static { xpos=1920, ypos=0, width=1920, height=20 }
    -- , position =     TopW C 99
    , alpha =        255
@@ -16,7 +16,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "   %StdinReader% <fc=#9E926D>♥</fc> %multicpu% <fc=#9E926D>♥</fc> %coretemp% <fc=#9E926D>♥</fc> %memory% <fc=#9E926D>♥</fc> %dynnetwork% }{ %music% <fc=#9E926D>♥</fc> %EHLE% <fc=#9E926D>♥</fc> %date%   "
+   , template = "   %StdinReader% <fc=#707989>♥</fc> %multicpu% <fc=#707989>♥</fc> %coretemp% <fc=#707989>♥</fc> %memory% <fc=#707989>♥</fc> %dynnetwork% }{ %music% <fc=#707989>♥</fc> %EHLE% <fc=#707989>♥</fc> %date%   "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start

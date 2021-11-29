@@ -61,8 +61,8 @@ myWorkspaces    = ["term","www","disc","4","5","6","7","8","9"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#DD363B"
-myFocusedBorderColor = "#9bdee0"
+myNormalBorderColor  = "#CF666A"
+myFocusedBorderColor = "#e0cecd"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -283,9 +283,9 @@ myBar = "xmobar"
 
 -- Custom PP, configure it as you like. It determines what is being written to the bar.
 -- myPP = xmobarPP { ppCurrent = xmobarColor "#87fdc1" "" . wrap ">" "<" }
-myPP = def { ppCurrent = xmobarColor "#DD363B" "" . wrap "<fn=1>\xfb0c</fn> " "<fn=1></fn>"
-           , ppTitle = xmobarColor "#DD363B" "" . shorten 30
-           , ppVisible = xmobarColor "#DD363B" "" . wrap "" ""
+myPP = def { ppCurrent = xmobarColor "#CF666A" "" . wrap "<fn=1>\xfb0c</fn> " "<fn=1></fn>"
+           , ppTitle = xmobarColor "#CF666A" "" . shorten 30
+           , ppVisible = xmobarColor "#CF666A" "" . wrap "" ""
            , ppUrgent  = xmobarColor "red" "yellow"
            }
 
