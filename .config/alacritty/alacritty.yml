@@ -179,8 +179,8 @@ background_opacity: 0.5
 colors:
   # Default colors
   primary:
-    background: '#000000'
-    foreground: '#ffb6c1'
+    # background: '#000000'
+    # foreground: '#ffb6c1'
     # Bright and dim foreground colors
     #
     # The dimmed foreground color is calculated automatically if it is not
@@ -266,26 +266,26 @@ colors:
   #  background: CellForeground
 
   # Normal colors
-  normal:
-    black:   '#000000'
-    red:     '#d52370'
-    green:   '#41af1a'
-    yellow:  '#bc7053'
-    blue:    '#6964ab'
-    magenta: '#c71fbf'
-    cyan:    '#939393'
-    white:   '#998eac'
+  # normal:
+  #   black:   '#000000'
+  #   red:     '#d52370'
+  #   green:   '#41af1a'
+  #   yellow:  '#bc7053'
+  #   blue:    '#6964ab'
+  #   magenta: '#c71fbf'
+  #   cyan:    '#939393'
+  #   white:   '#998eac'
 
   # Bright colors
-  bright:
-    black:   '#786d69'
-    red:     '#f41d99'
-    green:   '#22e529'
-    yellow:  '#f59574'
-    blue:    '#9892f1'
-    magenta: '#e90cdd'
-    cyan:    '#eeeeee'
-    white:   '#cbb6ff'
+  # bright:
+  #   black:   '#786d69'
+  #   red:     '#f41d99'
+  #   green:   '#22e529'
+  #   yellow:  '#f59574'
+  #   blue:    '#9892f1'
+  #   magenta: '#e90cdd'
+  #   cyan:    '#eeeeee'
+  #   white:   '#cbb6ff'
 
   # Dim colors
   #
