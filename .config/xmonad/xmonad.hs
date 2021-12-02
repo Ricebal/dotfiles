@@ -112,7 +112,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_k     ), windows W.focusUp  )
 
     -- Open SPT
-    , ((modm,               xK_m     ), spawn (myTerminal ++ " -e ~/.config/xmonad/bash/wal-launch.sh spt")  )
+    , ((modm,               xK_m     ), spawn (myTerminal ++ " -e ~/.scripts/wal-launch.sh spt")  )
 
     -- Swap the focused window and the master window
     , ((modm,               xK_Return), windows W.swapMaster)
@@ -148,13 +148,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
     -- Restart xmonad
-    , ((modm              , xK_q     ), spawn "~/.config/xmonad/bash/restart.sh")
+    , ((modm              , xK_q     ), spawn "~/.scripts/xmonad-restart.sh")
 
     -- Start firefox
     , ((modm              , xK_w     ), spawn "firefox")
 
     -- Start thunar
-    , ((modm              , xK_e     ), spawn (myTerminal ++ " -e ~/.config/xmonad/bash/wal-launch.sh ranger"))
+    , ((modm              , xK_e     ), spawn (myTerminal ++ " -e ~/.scripts/wal-launch.sh ranger"))
 
     -- Start discord
     , ((modm              , xK_d     ), spawn "discord")
