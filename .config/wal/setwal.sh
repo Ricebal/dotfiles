@@ -1,4 +1,6 @@
 #!/bin/bash
 wal -i $1 -n
-nitrogen --head=0 --save-auto $1
-nitrogen --head=1 --save-auto $1
+pywal-discord
+nitrogen --head=0 --set-auto $1
+nitrogen --head=1 --set-auto $1
+~/.config/xmonad/bash/restart.sh

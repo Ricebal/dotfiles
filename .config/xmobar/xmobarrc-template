@@ -16,7 +16,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "   %StdinReader% <fc=COLOR3>♥</fc> %multicpu% <fc=COLOR3>♥</fc> %coretemp% <fc=COLOR3>♥</fc> %memory% <fc=COLOR3>♥</fc> %dynnetwork% }{ %music% <fc=COLOR3>♥</fc> %EHLE% <fc=COLOR3>♥</fc> %date%   "
+   , template = "   %StdinReader% <fc=COLOR7>♥</fc> %multicpu% <fc=COLOR7>♥</fc> %coretemp% <fc=COLOR7>♥</fc> %memory% <fc=COLOR7>♥</fc> %dynnetwork% }{ %music% <fc=COLOR7>♥</fc> %EHLE% <fc=COLOR7>♥</fc> %date%   "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
