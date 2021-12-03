@@ -18,6 +18,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
 import XMonad.Layout.ToggleLayouts
+import XMonad.Util.EZConfig
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -83,6 +84,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "rofi -show run")
     , ((modm .|. shiftMask, xK_p     ), spawn "rofi-pass")
     , ((modm              , xK_i     ), spawn "rofi -show emoji")
+    , ((modm 		  , xK_y     ), spawn (myTerminal ++ " -e ~/scripts/wal-launch.sh $(~/.scripts/yt.sh -g)"))
+    , ((modm .|. shiftMask, xK_y     ), spawn (myTerminal ++ " -e ~/.scripts/yt.sh -gm"))
+    , ((modm .|. controlMask, xK_y   ), spawn "killall mpv")
+
     -- launch gmrun
     --, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
