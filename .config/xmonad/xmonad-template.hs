@@ -59,9 +59,7 @@ myModMask       = mod4Mask
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 myWorkspaces    = ["term","www","disc","4","5","6","7","8","9"]
-
 -- Border colors for unfocused and focused windows, respectively.
---
 myNormalBorderColor  = "BGCOLOR"
 myFocusedBorderColor = "FGCOLOR"
 
@@ -84,9 +82,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "rofi -show run")
     , ((modm .|. shiftMask, xK_p     ), spawn "rofi-pass")
     , ((modm              , xK_i     ), spawn "rofi -show emoji")
-    , ((modm 		  , xK_y     ), spawn (myTerminal ++ " -e ~/scripts/wal-launch.sh $(~/.scripts/yt.sh -g)"))
+    , ((modm              , xK_y     ), spawn (myTerminal ++ " -e ~/scripts/wal-launch.sh $(~/.scripts/yt.sh -g)"))
     , ((modm .|. shiftMask, xK_y     ), spawn (myTerminal ++ " -e ~/.scripts/yt.sh -gm"))
     , ((modm .|. controlMask, xK_y   ), spawn "killall mpv")
+    , ((modm .|. shiftMask, xK_l     ), spawn "~/.scripts/rofi-lutris.py")
 
     -- launch gmrun
     --, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -246,8 +245,8 @@ myLayout = tiled ||| Mirror tiled ||| noBorders Full
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "mpv"        --> doFloat
-    , className =? "Gimp"           --> doFloat
+    [ --className =? "mpv"        --> doFloat
+     className =? "Gimp"           --> doFloat
     -- , className =? "ffxiv_dx11.exe" --> doFullFloat
     , resource =? "Hellpoint.x86_64" --> doFullFloat
     , resource  =? "desktop_window" --> doIgnore
