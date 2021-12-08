@@ -20,3 +20,4 @@ alias config='/usr/bin/git --git-dir=/home/rice/dotfiles/ --work-tree=/home/rice
 alias sconfig='sudo /usr/bin/git --git-dir=/home/rice/dotfiles --work-tree=/home/rice'
 alias setwal='~/.scripts/setwal.sh'
 alias yt='~/.scripts/yt.sh'
+alias m='devour mpv'
