@@ -59,3 +59,4 @@ fi
 
 ~/.scripts/xmonad-restart.sh
 )
+
