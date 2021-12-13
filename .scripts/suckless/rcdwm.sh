@@ -2,5 +2,4 @@
 
 cd ~/suckless/dwm
 sudo rm config.h
-sudo make
-sudo make install
+sudo make && sudo make install

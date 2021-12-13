@@ -2,5 +2,4 @@
 
 cd ~/suckless/dwmblocks
 sudo rm blocks.h
-sudo make
-sudo make install
+sudo make && sudo make install

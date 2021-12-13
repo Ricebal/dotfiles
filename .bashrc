@@ -27,3 +27,4 @@ alias rcas='~/.scripts/suckless/rcas.sh' # Recompile all suckless utilities
 alias rcdwm='~/.scripts/suckless/rcdwm.sh' # Recompile DWM
 alias rcdm='~/.scripts/suckless/rcdm.sh' # Recompile dmenu
 alias rcdwmb='~/.scripts/suckless/rcdwmb.sh' # Recompile DWMBlocks
+alias rcst='~/.scripts/suckless/rcst.sh' # Recompile ST

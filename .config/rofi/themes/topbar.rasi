@@ -5,7 +5,7 @@
  */
 
 * {
-    text-color:  #e2c9c7;
+    text-color:  #d0dbe1;
     background-color:  rgba(0,0,0,0);
     dark: #1c1c1c;
     // Black
@@ -72,9 +72,9 @@ inputbar {
 }
 mainbox {
     expand: true;
-    background-color: #0f0e0daa;
+    background-color: #0c0b09aa;
     border: 0px 1px 1px 1px;
-    border-color: #e2c9c7;
+    border-color: #d0dbe1;
     spacing: 1em;
 }
 listview {
@@ -88,8 +88,8 @@ element-text {
     text-color:       inherit;
 }
 element selected  normal {
-    background-color: #e2c9c7;
-    text-color:     #0f0e0d;
+    background-color: #d0dbe1;
+    text-color:     #0c0b09;
 }
 element normal active {
     text-color: @lightblue;
