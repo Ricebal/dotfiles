@@ -82,7 +82,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "rofi -show run")
     , ((modm .|. shiftMask, xK_p     ), spawn "rofi-pass")
     , ((modm              , xK_i     ), spawn "rofi -show emoji")
-    , ((modm              , xK_y     ), spawn (myTerminal ++ " -e ~/scripts/wal-launch.sh $(~/.scripts/yt.sh -g)"))
+    , ((modm              , xK_y     ), spawn (myTerminal ++ " -e ~/.scripts/yt.sh -g"))
     , ((modm .|. shiftMask, xK_y     ), spawn (myTerminal ++ " -e ~/.scripts/yt.sh -gm"))
     , ((modm .|. controlMask, xK_y   ), spawn "killall mpv")
     , ((modm .|. shiftMask, xK_l     ), spawn "~/.scripts/rofi-lutris.py")
@@ -116,7 +116,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_k     ), windows W.focusUp  )
 
     -- Open SPT
-    , ((modm,               xK_m     ), spawn (myTerminal ++ " -e ~/.scripts/wal-launch.sh spt")  )
+    , ((modm,               xK_m     ), spawn (myTerminal ++ " -e spt")  )
 
     -- Swap the focused window and the master window
     , ((modm,               xK_Return), windows W.swapMaster)
@@ -158,7 +158,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_w     ), spawn "firefox")
 
     -- Start thunar
-    , ((modm              , xK_e     ), spawn (myTerminal ++ " -e ~/.scripts/wal-launch.sh ranger"))
+    , ((modm              , xK_e     ), spawn (myTerminal ++ " -e ranger"))
 
     -- Start discord
     , ((modm              , xK_d     ), spawn "discord")

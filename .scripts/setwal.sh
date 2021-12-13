@@ -57,6 +57,14 @@ else
     nitrogen --head=1 --set-auto $image
 fi
 
+## Fix things that need recompiling
+# Xmonad
 ~/.scripts/xmonad-restart.sh
+
+# Dmenu
+~/.scripts/suckless/rcdm.sh
+
+# DWM
+~/.scripts/suckless/rcdwm.sh
 )
 

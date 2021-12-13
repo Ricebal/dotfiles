@@ -8,8 +8,8 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
+import:
+  - ~/.cache/wal/colors.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -176,9 +176,9 @@ font:
 #draw_bold_text_with_bright_colors: false
 background_opacity: 0.5
 # Colors (Tomorrow Night)
-colors:
+#colors:
   # Default colors
-  primary:
+  #  primary:
     # background: '#000000'
     # foreground: '#ffb6c1'
     # Bright and dim foreground colors
@@ -197,8 +197,8 @@ colors:
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
   #cursor:
-    text: CellBackground
-    cursor: '#fbb829'
+  #  text: CellBackground
+  #  cursor: '#fbb829'
 
   # Vi mode cursor colors
   #
