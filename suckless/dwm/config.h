@@ -61,21 +61,29 @@ static const char term[] = "alacritty";
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *passmenucmd[] = { "passmenu", NULL };
+static const char *lutrismenucmd[] = { "/home/rice/.scripts/dmenu-lutris.py", NULL };
 static const char *termcmd[]  = { term, NULL };
 static const char *wwwcmd[]  = { "firefox", NULL };
 static const char *discordcmd[]  = { "discord", NULL };
 static const char *fmcmd[]  = { term , "-e", "ranger", NULL };
 static const char *volumecmd[]  = { "pavucontrol", NULL };
+static const char *fsccmd[]  = { "gscreenshot", "-c", NULL };
+static const char *asccmd[]  = { "gscreenshot", "-sc", NULL };
+static const char *ytcmd[]  = { "/home/rice/.scripts/yt.sh", "-g", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = passmenucmd } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lutrismenucmd } },
+	{ MODKEY,                       XK_y,      spawn,          {.v = ytcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,	                XK_e,      spawn,          {.v = fmcmd } },
 	{ MODKEY,	                XK_w,      spawn,          {.v = wwwcmd } },
 	{ MODKEY,	                XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY,	                XK_v,      spawn,          {.v = volumecmd } },
+	{ 0,	  	                XK_Print,  spawn,          {.v = fsccmd } },
+	{ ShiftMask,	                XK_Print,  spawn,          {.v = asccmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
