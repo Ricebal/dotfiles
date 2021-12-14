@@ -57,6 +57,8 @@ else
     nitrogen --head=1 --set-auto $image
 fi
 
+sudo cp $image /usr/share/pixmaps/wallpaper
+
 ## Fix things that need recompiling
 # Xmonad
 ~/.scripts/xmonad-restart.sh

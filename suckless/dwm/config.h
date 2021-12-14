@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "xft:Mononoki Nerd Font:size=11", "xft:FontAwesome:size=13" };
 #include "/home/rice/.cache/wal/colors-wal-dwm.h"
-static const unsigned int baralpha = 0x7d;
+static const unsigned int baralpha = 0xdd;
 static const unsigned int borderalpha = OPAQUE;
 static const unsigned int alphas[][3]      = {
        /*               fg      bg        border     */
