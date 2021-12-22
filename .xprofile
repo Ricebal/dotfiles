@@ -1,0 +1,21 @@
+# Compositor
+picom -c &
+
+# Noisetorch
+noisetorch -i &
+
+# Wal
+wal -Rn
+
+# XResources
+xrdb ~/.cache/wal/colors.Xresources
+
+# Nitrogen
+nitrogen --head=0 --set-auto $(cat ~/.cache/wal/wal) 
+nitrogen --head=1 --set-auto $(cat ~/.cache/wal/wal) 
+
+# DWMBlocks
+dwmblocks &
+
+# Swap esc and caps
+setxkbmap -option caps:swapescape
