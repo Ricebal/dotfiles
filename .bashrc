@@ -21,6 +21,8 @@ alias sconfig='sudo /usr/bin/git --git-dir=/home/rice/dotfiles --work-tree=/home
 alias setwal='~/.scripts/setwal.sh'
 alias yt='~/.scripts/yt.sh'
 alias m='devour mpv'
+alias dgp='sudo devour gparted'
+alias redunst='wal -Rsn; killall dunst; dunstify "Title" "This is a test notification"'
 
 # Suckless
 alias rcas='~/.scripts/suckless/rcas.sh' # Recompile all suckless utilities

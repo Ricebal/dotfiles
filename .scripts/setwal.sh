@@ -3,6 +3,7 @@
 # Vars
 wideflag='false'
 helpflag='false'
+sucklessflag='false'
 image=${!#}
 
 
@@ -13,10 +14,11 @@ if [ $# -eq 0 ]; then
 fi
 
 # Flags
-while getopts :hw flag; do
+while getopts :hws flag; do
     case $flag in
         h) helpflag='true';;
         w) wideflag='true';;
+        s) sucklessflag='true';;
         ?) echo "setwal: usage: setwal [options] path/to/image, use -h for help."; exit 1;;
     esac
 done
@@ -31,6 +33,7 @@ if $helpflag; then
     echo "Options:"
     echo "-h            show this page"
     echo "-w            stretch the image across both screens"
+    echo "-s            recompile suckless programs"
     exit 1
 fi
 
@@ -57,16 +60,13 @@ else
     nitrogen --head=1 --set-auto $image
 fi
 
-sudo cp $image /usr/share/pixmaps/wallpaper
+slick-pywal
 
-## Fix things that need recompiling
-# Xmonad
-~/.scripts/xmonad-restart.sh
+if $sucklessflag; then
+	.scripts/suckless/rcas.sh
+fi
 
-# Dmenu
-~/.scripts/suckless/rcdm.sh
-
-# DWM
-~/.scripts/suckless/rcdwm.sh
-)
+notify-send "setwal" "Wallpaper set successfully"
+exit 
+) 
 
