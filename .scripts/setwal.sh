@@ -60,7 +60,7 @@ else
     nitrogen --head=1 --set-auto $image
 fi
 
-slick-pywal
+cp $image .cache/wal/wal-image
 
 if $sucklessflag; then
 	.scripts/suckless/rcas.sh
