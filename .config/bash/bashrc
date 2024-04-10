@@ -1,0 +1,19 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Pywal
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
+# Exports
+export EDITOR=nvim
+export PASSWORD_STORE_DIR=$HOME/.local/share/password-store
+
+PS1='[\u@\h \W]\$ '
+
+# Aliases
+[[ -f ~/.config/bash/bash_aliases ]] && . ~/.config/bash/bash_aliases
