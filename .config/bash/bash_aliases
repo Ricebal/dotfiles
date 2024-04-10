@@ -2,8 +2,6 @@
 # Aliases
 #
 
-echo "Loading aliases"
-
 alias ls='ls --color=auto'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias sconfig='sudo /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
